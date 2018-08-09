@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="213.0" prefWidth="693.0" style="-fx-background-color: #1E1E20;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SolicitacaoMensagemController">
+    <stylesheets>
+        <URL value="@/views/css/solicitacaomensagem.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="257.0" layoutY="24.0" text="Solicitação de Amizade" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_PLUS" layoutX="76.0" layoutY="136.0" size="50" />
+      <Label fx:id="lblNomeUsuario" layoutX="143.0" layoutY="95.0" text="Nome" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmailUsuario" layoutX="144.0" layoutY="119.0" text="Email" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAceitar" layoutX="409.0" layoutY="104.0" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #82FA58;" text="Aceitar" />
+      <JFXButton fx:id="btnRecusar" layoutX="531.0" layoutY="105.0" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #DC3522;" text="Recusar" textFill="WHITE" />
+   </children>
+</AnchorPane>

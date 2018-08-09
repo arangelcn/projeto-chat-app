@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="painelRootMensagens" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1170.0" style="-fx-background-color: #1E1E20;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MensagemController">
+   <children>
+      <JFXListView fx:id="listViewMensagens" layoutX="366.0" layoutY="37.0" prefHeight="435.0" prefWidth="439.0" style="-fx-background-color: #1E1E20;" stylesheets="@css/LVMensagem.css" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="366.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="37.0" />
+      <JFXTextField fx:id="txtMensagem" focusColor="#dc3522" labelFloat="true" layoutX="363.0" layoutY="516.0" onKeyPressed="#enviaMensagemClicado" prefHeight="28.0" prefWidth="359.0" promptText="Digite aqui" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="363.0" AnchorPane.rightAnchor="448.0" />
+      <FontAwesomeIconView fx:id="iconEnviarMensagem" fill="WHITE" glyphName="SEND" layoutX="787.0" layoutY="540.0" onMouseClicked="#enviarMensagem" size="20" wrappingWidth="21.0" AnchorPane.bottomAnchor="25.75223159790039" AnchorPane.rightAnchor="362.0" />
+      <FontAwesomeIconView fx:id="btnEnviaImg" fill="WHITE" glyphName="FILE" layoutX="746.0" layoutY="539.0" onMouseClicked="#btnEnviaImgClicado" size="20" AnchorPane.bottomAnchor="26.75223159790039" AnchorPane.rightAnchor="402.5714282989502" />
+      <VBox alignment="CENTER" fillWidth="false" layoutX="840.0" prefHeight="569.0" prefWidth="330.0" style="-fx-background-color: #DC3522;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Contatos" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefHeight="6.0" prefWidth="279.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Separator>
+            <JFXListView fx:id="listViewUsuarios" onMouseClicked="#listViewUserClicada" prefHeight="407.0" prefWidth="330.0" style="-fx-background-color: #DC3522;" stylesheets="@css/MensagemCSS.css" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></JFXListView>
+            <JFXButton fx:id="btnAddContato" alignment="CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onMouseClicked="#btnAddContatoClicado" prefHeight="28.0" prefWidth="273.0" style="-fx-background-color: #1E1E20;" text="Novo Amigo" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="569.0" prefWidth="330.0" style="-fx-background-color: #DC3522;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="17.0" prefWidth="290.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="27">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <Label fx:id="lblNomeUsr" alignment="CENTER" contentDisplay="CENTER" text="Nome" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <MaterialDesignIconView fx:id="btnLogout" fill="WHITE" glyphName="LOGOUT" onMouseClicked="#logout" size="20" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXListView prefHeight="443.0" prefWidth="290.0" style="-fx-background-color: #DC3522;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></JFXListView>
+            <HBox prefHeight="0.0" prefWidth="290.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fx:id="btnSair" fill="WHITE" glyphName="CLOSE" onMouseClicked="#sair" size="25.0" wrappingWidth="28.0" />
+                  <Label text="Fechar" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <MaterialDesignIconView fx:id="btnMinimizar" fill="WHITE" glyphName="CHEVRON_DOWN" onMouseClicked="#minimizar" size="26">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></MaterialDesignIconView>
+                  <Label text="Minimizar" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

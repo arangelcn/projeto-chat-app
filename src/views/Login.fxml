@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootLoginPane" prefHeight="519.0" prefWidth="1029.0" style="-fx-background-color: #1E1E20;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <AnchorPane fx:id="CadastroPane" layoutX="632.0" layoutY="44.0" prefHeight="437.0" prefWidth="336.0" style="-fx-background-color: #DC3522;">
+         <children>
+            <Label fx:id="lblCadastro" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="29.0" prefHeight="21.0" prefWidth="249.0" text="Cadastro" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <JFXTextField fx:id="txtEmailCadastro" focusColor="#374140" layoutX="40.0" layoutY="84.0" maxWidth="257.0" minWidth="164.0" prefHeight="31.0" prefWidth="257.0" promptText="email" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtNomeCadastro" focusColor="#374140" layoutX="41.0" layoutY="137.0" maxWidth="257.0" minWidth="164.0" prefHeight="31.0" prefWidth="257.0" promptText="Nome" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="txtSenhaCad" focusColor="#374140" layoutX="39.0" layoutY="191.0" maxWidth="240.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" promptText="senha" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="txtConfirmSenhaCad" focusColor="#374140" layoutX="41.0" layoutY="243.0" maxWidth="240.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" promptText="confirme a senha" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+            <JFXButton fx:id="btnCadastrar" layoutX="39.0" layoutY="304.0" onAction="#btnCadastrarClicado" prefHeight="27.0" prefWidth="257.0" style="-fx-background-color: #374140;" text="Cadastrar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="LoginPane" layoutX="633.0" layoutY="44.0" prefHeight="437.0" prefWidth="336.0" style="-fx-background-color: #DC3522;">
+         <children>
+            <Label fx:id="lblLogin" alignment="CENTER" layoutX="41.0" layoutY="45.0" prefHeight="21.0" prefWidth="257.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <JFXTextField fx:id="txtLogEmail" focusColor="#374140" layoutX="40.0" layoutY="110.0" maxWidth="257.0" minWidth="164.0" prefHeight="31.0" prefWidth="257.0" promptText="email" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="txtLogSenha" focusColor="#374140" layoutX="39.0" layoutY="184.0" maxWidth="240.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" promptText="password" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+            <JFXButton fx:id="btnLogin" layoutX="40.0" layoutY="255.0" onAction="#btnLoginClicado" prefHeight="27.0" prefWidth="257.0" style="-fx-background-color: #374140;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="519.0" fitWidth="591.0" layoutX="-28.0" opacity="0.23" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/login.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="81.0" layoutY="195.0" text="Welcome to CHAT" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogarCadastrar" layoutX="141.0" layoutY="288.0" onAction="#btnCadastrarLogarClicado" prefHeight="27.0" prefWidth="257.0" style="-fx-background-color: #374140;" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="81.0" layoutY="238.0" text="by: APS-UNIP" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <MaterialDesignIconView fx:id="btnClose" fill="WHITE" glyphName="CLOSE" layoutX="995.0" layoutY="32.0" onMouseClicked="#sair" size="20.0" wrappingWidth="21.201176643371582" />
+      <MaterialDesignIconView fx:id="btnMinimizar" fill="WHITE" glyphName="CHEVRON_DOWN" layoutX="968.0" layoutY="32.0" onMouseClicked="#minimizar" size="20.0" wrappingWidth="21.201191186904907" />
+   </children>
+</AnchorPane>
